@@ -1,4 +1,4 @@
-package com.skeaven.spider;
+package com.skeaven.httpclient;
 
 import com.skeaven.ip.ProxyIP;
 import com.skeaven.ip.ProxyIPPool;
@@ -108,9 +108,7 @@ public class CustomHttpClient {
             } else {
                 logger.warn("服务器未正确返回!");
             }
-            if (proxyIP != null) {
-                proxyIP.setQuality((proxyIP.getQuality() - 1 > 0) ? proxyIP.getQuality() - 1 : 1);
-            }
+            proxyIP.setQuality((proxyIP.getQuality() - 1 > 0) ? proxyIP.getQuality() - 1 : 1);
             return null;
         } catch (ConnectTimeoutException e) {
             logger.error("请求超时!");
@@ -119,9 +117,7 @@ public class CustomHttpClient {
         } finally {
             request.releaseConnection();
         }
-        if (proxyIP != null) {
-            proxyIP.setQuality(proxyIP.getQuality() + 1);
-        }
+        proxyIP.setQuality(proxyIP.getQuality() + 1);
         return null;
     }
 

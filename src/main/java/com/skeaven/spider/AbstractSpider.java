@@ -1,18 +1,19 @@
 package com.skeaven.spider;
 
 import com.skeaven.ip.ProxyIPPool;
+import com.skeaven.httpclient.CustomHttpClient;
 import org.apache.http.Header;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public abstract class AbstractSpider implements Runnable {
-    protected Logger logger = LoggerFactory.getLogger(ProxyIPPool.class);
+    Logger logger = LoggerFactory.getLogger(ProxyIPPool.class);
 
     //是否启用代理
-    protected boolean proxy = false;
+    boolean proxy = false;
 
-    //自定义的http client
-    protected CustomHttpClient httpClient;
+    //自定义的http httpclient
+    CustomHttpClient httpClient;
 
     //爬取网址需要的头文件
     protected Header[] headers;
@@ -36,12 +37,12 @@ public abstract class AbstractSpider implements Runnable {
         httpClient.setProxyIPPool(null);
     }
 
-    public void setHttpClient(CustomHttpClient client) {
+    protected void setHttpClient(CustomHttpClient client) {
         this.httpClient = client;
     }
 
     //限制仅子类在构造时可以设置
-    public void setHeaders(Header[] headers) {
+    protected void setHeaders(Header[] headers) {
         this.headers = headers;
     }
 }

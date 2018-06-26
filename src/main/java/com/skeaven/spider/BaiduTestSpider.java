@@ -1,5 +1,7 @@
 package com.skeaven.spider;
 
+import com.skeaven.httpclient.CustomHttpClient;
+
 public class BaiduTestSpider extends AbstractSpider {
 
     public BaiduTestSpider(){

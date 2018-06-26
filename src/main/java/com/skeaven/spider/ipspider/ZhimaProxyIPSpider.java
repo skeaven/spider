@@ -3,7 +3,7 @@ package com.skeaven.spider.ipspider;
 import com.skeaven.ip.ProxyIP;
 import com.skeaven.ip.evaluator.AvailableEvaluator;
 import com.skeaven.ip.evaluator.QualityEvaluator;
-import com.skeaven.spider.CustomHttpClient;
+import com.skeaven.httpclient.CustomHttpClient;
 import com.skeaven.spider.ProxyIPSpider;
 
 import java.util.ArrayList;

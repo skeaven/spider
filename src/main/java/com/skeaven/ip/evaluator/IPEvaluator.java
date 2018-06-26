@@ -1,7 +1,7 @@
 package com.skeaven.ip.evaluator;
 
 import com.skeaven.ip.ProxyIP;
-import com.skeaven.spider.CustomHttpClient;
+import com.skeaven.httpclient.CustomHttpClient;
 
 public interface IPEvaluator {
 

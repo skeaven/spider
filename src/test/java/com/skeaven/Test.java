@@ -1,13 +1,13 @@
 package com.skeaven;
 
 import com.skeaven.ip.ProxyIP;
-import com.skeaven.spider.CustomHttpClient;
+import com.skeaven.httpclient.CustomHttpClient;
 
 public class Test {
     public static void main(String[] args) {
         CustomHttpClient client = new CustomHttpClient();
 //        for (int i = 0; i < 10; i++) {
-//            System.out.println(client.htmlGet("https://www.google.com"));
+//            System.out.println(httpclient.htmlGet("https://www.google.com"));
 //        }
 
 

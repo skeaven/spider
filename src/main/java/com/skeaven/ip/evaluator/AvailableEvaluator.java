@@ -1,6 +1,6 @@
 package com.skeaven.ip.evaluator;
 
-import com.skeaven.spider.CustomHttpClient;
+import com.skeaven.httpclient.CustomHttpClient;
 import com.skeaven.ip.ProxyIP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
