@@ -1,8 +1,9 @@
-package com.skeaven.spider;
+package com.skeaven.spider.ipspider;
 
 import com.skeaven.ip.ProxyIP;
 import com.skeaven.ip.ProxyIPPool;
 import com.skeaven.ip.evaluator.IPEvaluator;
+import com.skeaven.spider.AbstractSpider;
 
 import java.util.List;
 

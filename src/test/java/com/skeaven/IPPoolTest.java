@@ -1,18 +1,15 @@
 package com.skeaven;
 
 import com.skeaven.ip.ProxyIPPool;
-import com.skeaven.ip.ProxyIPPoolMonitor;
+import com.skeaven.timertask.ProxyIPPoolMonitor;
 import com.skeaven.spider.BaiduTestSpider;
-import com.skeaven.spider.ProxyIPSpider;
 import com.skeaven.spider.ipspider.XicidailiProxyIPSpider;
-import com.skeaven.spider.ipspider.ZhimaProxyIPSpider;
 
 public class IPPoolTest {
     public static void main(String[] args) {
         ProxyIPPool pool = new ProxyIPPool();
         ProxyIPPoolMonitor monitor = new ProxyIPPoolMonitor();
-//        monitor.startMonitor(pool, new XicidailiProxyIPSpider().setPool(pool));
-        monitor.startMonitor(pool, new ZhimaProxyIPSpider().setPool(pool));
+        monitor.startMonitor(pool, new XicidailiProxyIPSpider().setPool(pool));
 
         Thread thread1 = new Thread(new BaiduTestSpider().openProxy(pool), "baidu spider1");
         thread1.start();

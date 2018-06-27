@@ -1,6 +1,8 @@
-package com.skeaven.ip;
+package com.skeaven.timertask;
 
-import com.skeaven.spider.ProxyIPSpider;
+import com.skeaven.ip.ProxyIPPool;
+import com.skeaven.ip.ProxyIPUtils;
+import com.skeaven.spider.ipspider.ProxyIPSpider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -7,13 +7,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public abstract class AbstractSpider implements Runnable {
-    Logger logger = LoggerFactory.getLogger(ProxyIPPool.class);
+    protected Logger logger = LoggerFactory.getLogger(ProxyIPPool.class);
 
     //是否启用代理
-    boolean proxy = false;
+    protected boolean proxy = false;
 
     //自定义的http httpclient
-    CustomHttpClient httpClient;
+    protected CustomHttpClient httpClient;
 
     //爬取网址需要的头文件
     protected Header[] headers;
