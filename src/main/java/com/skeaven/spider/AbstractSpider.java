@@ -13,7 +13,7 @@ public abstract class AbstractSpider implements Runnable {
     protected boolean proxy = false;
 
     //自定义的http httpclient
-    protected CustomHttpClient httpClient;
+    protected CustomHttpClient httpClient = new CustomHttpClient();
 
     //爬取网址需要的头文件
     protected Header[] headers;

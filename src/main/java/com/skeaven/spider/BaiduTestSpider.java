@@ -1,13 +1,6 @@
 package com.skeaven.spider;
 
-import com.skeaven.httpclient.CustomHttpClient;
-
 public class BaiduTestSpider extends AbstractSpider {
-
-    public BaiduTestSpider(){
-        this.httpClient = new CustomHttpClient();
-    }
-
     @Override
     public void run() {
         String url = "http://www.baidu.com";

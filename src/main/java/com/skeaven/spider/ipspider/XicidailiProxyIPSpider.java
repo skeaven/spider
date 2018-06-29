@@ -32,7 +32,6 @@ public class XicidailiProxyIPSpider extends ProxyIPSpider {
         this.setHeaders(new Header[list.size()]);
         this.setUrl("http://www.xicidaili.com/wt/");
         this.setIPEvaluator(new QualityEvaluator(new AvailableEvaluator("http://www.baidu.com")));
-        this.setHttpClient(new CustomHttpClient());
         list.toArray(headers);
     }
 
